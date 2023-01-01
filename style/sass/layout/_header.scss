@@ -1,0 +1,91 @@
+@use "../abstract/variables";
+@use "../base/base";
+@use "../components/button";
+@use "../abstract/mixins";
+
+#navbar{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    width: 100%;
+    z-index: 1000;
+    background-color: variables.$midnight-green;
+    padding: 73px 0 20px;
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar__logo{
+    width: 160px;
+    img{
+      width: 100%;
+      }
+  }
+  .navbar__menus{
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+      margin-left: 80px;
+     .navbar__list .navbar__link{
+          @include mixins.nav-link;
+      }
+  }
+  .toggle-btn{
+    display: none;
+  }
+}
+
+@media (max-width:590px){
+ #navbar {
+  .navbar__menus {
+    /* display: none; */
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: variables.$police-blue;
+    top: 0;
+    right: -1000px;
+    bottom: 0;
+    width: 255px;
+    transition: 0.3s;
+    z-index: 999;
+    padding-left: 48px;
+    padding-top: 142px;
+  }
+  .navbar__list {
+    justify-content: space-between;
+    height: 80px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .navbar__list .navbar__link {
+    display: inline-block;
+    font-size: 1.875rem;
+    line-height: 25px;
+  }
+  .toggle-btn {
+    width: 25px;
+    height: 25px;
+    display: block;
+    border: none;
+    background-color: transparent;
+  }
+  .toggle-btn img {
+    width: 100%;
+  }
+  .close-btn {
+    position: absolute;
+    z-index: 9999;
+    top: 80px;
+    right: 15px;
+  }
+ }
+}

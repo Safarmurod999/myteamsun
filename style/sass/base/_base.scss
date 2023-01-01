@@ -1,0 +1,35 @@
+@use "../abstract/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 10px;
+  height: 100vh;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: variables.$police-blue;
+    opacity: .7;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: variables.$white;
+    border-radius: 5rem;
+  }
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" id="navbar">
+        <div class="container">
+          <div class="navbar__logo">
+            <img
+              src="images/home-img/myteam.svg"
+              class="navbar__logo__image"
+              alt="navbar__logo"
+            />
+          </div>
+          <div id="navbar-responsive" class="navbar__menus">
+            <ul class="navbar__list">
+              <li><a class="navbar__link" href="#">home</a></li>
+              <li><a class="navbar__link" href="about.html">about</a></li>
+            </ul>
+            <button class="toggle-btn close-btn" onclick="closeNavbar()">
+              <img src="images/header-img/close.svg" alt="menu" />
+            </button>
+            <a href="contact.html"
+              ><button class="navbar__btn" id="contact">contact us</button></a
+            >
+          </div>
+          <button class="toggle-btn" onclick="openNavbar()">
+            <img src="images/header-img/menu.svg" alt="menus" />
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="home" id="home">
+        <img
+          class="home__img home__img--left"
+          src="images/home-img/disk-left.svg"
+          alt="disk-left"
+        />
+        <div class="container">
+          <div class="home__heading">
+            <h1>
+              Find the <br />
+              best <span>talent</span>
+            </h1>
+          </div>
+          <div class="home__content">
+            <div class="line"></div>
+            <p>
+              Finding the right people and building high performing teams can be
+              hard. Most companies aren't tapping into the abundance of global
+              talent. We're about to change that.
+            </p>
+          </div>
+        </div>
+        <div class="container home__container">
+          <img
+            class="home__img home__img--bottom"
+            src="images/home-img/disk-bottom.svg"
+            alt="disk-bottom"
+          />
+        </div>
+      </section>
+      <section class="build">
+        <div class="container">
+          <div class="build__title">
+            <div class="line"></div>
+            <h2>Build & manage distributed teams like no one else.</h2>
+          </div>
+          <div class="build__features">
+            <div class="build__row">
+              <div class="build__row--img">
+                <img
+                  src="images/home-img/icon-experienced.svg"
+                  alt="icon-experienced"
+                />
+              </div>
+              <div class="build__row--content">
+                <h5>Experienced Individuals</h5>
+                <p>
+                  Our network is made up of highly experienced professionals who
+                  are passionate about what they do.
+                </p>
+              </div>
+            </div>
+            <div class="build__row">
+              <div class="build__row--img">
+                <img
+                  src="images/home-img/icon-gear.svg"
+                  alt="icon-experienced"
+                />
+              </div>
+              <div class="build__row--content">
+                <h5>Easy to Implement</h5>
+                <p>
+                  Our processes have been refined over years of implementation
+                  meaning our teams always deliver.
+                </p>
+              </div>
+            </div>
+            <div class="build__row">
+              <div class="build__row--img">
+                <img
+                  src="images/home-img/icon-stat.svg"
+                  alt="icon-experienced"
+                />
+              </div>
+              <div class="build__row--content">
+                <h5>Enhanced Productivity</h5>
+                <p>
+                  Our customized platform with in-built analytics helps you
+                  manage your distributed teams.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="build__right"
+          src="images/home-img/buil-right.svg"
+          alt="buil-right"
+        />
+      </section>
+      <section class="success">
+        <img
+          class="success__img--left"
+          src="images/home-img/success-left.svg"
+          alt="success-left"
+        />
+        <img
+          class="success__img--bottom"
+          src="images/home-img/success-bottom.svg"
+          alt="success"
+        />
+        <div class="container">
+          <div class="success__heading">
+            <h2>
+              Delivering real results for top companies. Some of our
+              <span>success stories.</span>
+            </h2>
+          </div>
+          <div class="success__row">
+            <div class="success__content content">
+              <div class="content__text">
+                <p>
+                  “The team perfectly fit the specialized skill set required.
+                  They focused on the most essential features helping us launch
+                  the platform eight months faster than planned.”
+                </p>
+                <h5>Kady Baker</h5>
+                <h6>Product Manager at Bookmark</h6>
+              </div>
+              <div class="content__img">
+                <img src="images/home-img/user-kady.jpg" alt="" />
+              </div>
+            </div>
+            <div class="success__content content">
+              <div class="content__text">
+                <p>
+                  “We needed to automate our entire onboarding process. The team
+                  came in and built out the whole journey. Since going live,
+                  user retention has gone through the roof!”
+                </p>
+                <h5>Aiysha Reese</h5>
+                <h6>Founder of Manage</h6>
+              </div>
+              <div class="content__img">
+                <img src="images/home-img/user-aiysha.jpg" alt="" />
+              </div>
+            </div>
+            <div class="success__content content">
+              <div class="content__text">
+                <p>
+                  “Amazing. Our team helped us build an app that delivered a new
+                  experience for hiring a physio. The launch was an instant
+                  success with 100k downloads in the first month.”
+                </p>
+                <h5>Arthur Clarke</h5>
+                <h6>Co-founder of MyPhysio</h6>
+              </div>
+              <div class="content__img">
+                <img src="images/home-img/user-arthur.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="start">
+        <img
+          class="start__img"
+          src="images/home-img/start-left.svg"
+          alt="start-left"
+        />
+        <div class="container">
+          <h1 class="start__title">Ready to get started?</h1>
+          <button class="start__btn" id="contact">contact</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        
+        <div class="footer__left">
+          <div class="footer__nav">
+            <div class="footer__top">
+              <img src="images/home-img/myteam.svg" alt="myteam" />
+            </div>
+            <div class="nav__bottom">
+              <a class="footer__link" href="#">home</a
+              ><a class="footer__link" href="about.html">about</a>
+            </div>
+          </div>
+          <div class="footer__location">
+            <p>
+              987 Hillcrest Lane <br />
+              Irvine, CA <br />
+              California 92714 <br />
+              Call Us : 949-833-7432
+            </p>
+          </div>
+          
+        </div>
+        <div class="footer__social">
+          <img
+            class="footer__icons"
+            src="images/home-img/social-icons.svg"
+            alt="social-icons"
+          />
+          <p>Copyright 2020. All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

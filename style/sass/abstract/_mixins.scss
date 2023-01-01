@@ -1,0 +1,8 @@
+@use "../abstract/variables";
+
+@mixin nav-link {
+  display: inline-block;
+  margin: 0 20px;
+  color: variables.$white;
+  font: variables.$body-first;
+}
