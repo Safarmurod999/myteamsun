@@ -392,10 +392,17 @@
     }
     &__container {
       padding-bottom: 197px;
+      img{
+        position: absolute;
+        bottom:0;
+        left:50%;
+        transform: translateX(-50%);
+      }
     }
     &__img--left {
       display: none;
     }
+
     &__heading {
       display: flex;
       justify-content: center;

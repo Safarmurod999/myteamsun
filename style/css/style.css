@@ -612,6 +612,12 @@ a {
   .home__container {
     padding-bottom: 197px;
   }
+  .home__container img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .home__img--left {
     display: none;
   }
