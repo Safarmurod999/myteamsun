@@ -624,6 +624,7 @@ header .navbar-shrink {
     text-align: center;
   }
   .success .content__text {
+    display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;

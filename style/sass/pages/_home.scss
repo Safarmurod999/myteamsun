@@ -307,7 +307,9 @@
         line-height: 56px;
       }
     }
+    
     &__content {
+     
       height: 100%;
       align-items: center;
       width: 100%;
@@ -367,12 +369,18 @@
     .content {
       text-align: center;
       &__text {
+        display:flex;
         @include mixins.flex-box(column);
       }
       p {
         width: 74%;
       }
     }
+    // .content-text{
+    //   display:flex;
+    //   flex-direction:column;
+    //   align-items:center;
+    // }
   }
 }
 @media (max-width: 590px) {
