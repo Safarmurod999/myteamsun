@@ -8,8 +8,7 @@
   background-color: variables.$dark-green;
   .container{
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include mixins.flex-box(row);
     justify-content: space-between;
   }
   &__nav{
@@ -29,10 +28,13 @@
   &__link:first-child {
     margin-left: 0;
   }
+  &__link:hover{
+    color:variables.$light-carol;
+  }
   &__left{
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include mixins.flex-box(row);
+    text-align: left;
     justify-content: space-between;
   }
   &__location{
@@ -67,6 +69,9 @@
             flex-direction: column;
         }
         &__left{
+            display: flex;
+            @include mixins.flex-box(row);
+            justify-content: space-between;
             width: 100%;
         }
         &__location{
@@ -85,10 +90,8 @@
 @media (max-width: 590px){
     .footer {
         &__left {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            display: flex;
+            @include mixins.flex-box(column);
         }
         &__nav{
             margin-right: 0;
@@ -110,9 +113,8 @@
             margin-bottom: 40px;
         }
         &__social{
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            display: flex;
+            @include mixins.flex-box(column);
             p{
                 margin-top: 16px;
             }

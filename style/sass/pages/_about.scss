@@ -1,0 +1,209 @@
+@use "../layout/container";
+@use "../layout/header";
+@use "../layout/footer";
+@use "../abstract/variables" as vars;
+@use "../abstract/mixins";
+@use "../components/button";
+.about{
+    position: relative;
+    padding: 177px 0 108px;
+    background-color: vars.$midnight-green;
+    .container{
+        display: flex;
+        width: 100%;
+        padding: 0 24px;
+        @include mixins.flex-box(column);
+    }
+    &__title{
+        font: vars.$h2;
+        color: vars.$white;
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 16px;
+    }
+    &__content {
+        font: vars.$body-second;
+        color: vars.$white;
+    }
+    &__img{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.directors {
+    position:relative;
+    padding: 100px 0 116px;
+    background-color: vars.$deep-jungle-green;
+    .container{
+        @include mixins.flex-box(column);
+    }
+    &__img--top{
+        position: absolute;
+        top:0;
+        left:0;
+    }
+    &__img--bottom{
+        position: absolute;
+        right: 0;
+        bottom:0;
+    }
+    &__title {
+        font: vars.$body-first;
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 48px;
+        color: vars.$white;
+    }
+    &__row{
+        @include mixins.grid-box(1,39px);
+    }
+    &__card{
+        position: relative;
+        background-color: vars.$s-state-green;
+        padding: 32px 45px 56px;
+        display: flex;
+        @include mixins.flex-box(column);
+        h5{
+            margin-top: 16px;
+            font: vars.$body-first;
+            color: vars.$rapture-blue;
+        }
+        p{
+            font: vars.$body-second;
+            color: vars.$white;
+        }
+        .directors__about{
+            display: none;
+            p{
+                margin-bottom: 24px;
+            }
+        }
+        a{
+
+            position: absolute;
+            bottom: -28px;
+            border: none;
+            background-color: transparent;
+        }        
+        }
+        &__card:hover &__about{
+            display: block;
+        }
+        &__card:hover {
+            background-color: vars.$dark-green;
+                .card__img{
+                    display: none;
+                }
+                .card__text{
+                    display: none;
+                }
+                a{
+                    img{
+                        content: url('../../../images/about-img/x-icon.svg');
+                    }
+                }
+        }
+
+}
+
+.clients {
+    position: relative;
+    text-align: center;
+    padding: 88px 0;
+    background-color: vars.$s-state-green;
+    .container{
+        display: flex;
+        @include mixins.flex-box(column);
+    }
+    &__img{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &__title {
+        font: vars.$body-first;
+        font-size: 32px;
+        line-height: 32px;
+        color: vars.$white;
+        margin-bottom: 64px;
+    }
+    &__row {
+        width: 100%;
+        @include mixins.grid-box(1,57px);
+        text-align: center;
+        img{
+            display: inline-block;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (min-width:768px){
+    .about {
+        padding: 224px 0 112px;
+        &__title {
+            font-size: 64px;
+            line-height: 56px;
+        }
+        &__content {
+            width: 487px;
+        }
+        &__img {
+            content: url('../../../images/about-img/about-right-2.svg');
+        }
+    }
+    .directors {
+        &__row {
+            @include mixins.grid-box(2,39px);
+        }
+    }
+    .clients {
+        padding: 100px 0;
+        &__img{
+            content: url('../../../images/about-img/clients-bg-3.svg');
+        }
+        &__row {
+            @include mixins.grid-box(5,40px);
+            img{
+                width: 103px;
+                height: 17px;;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .about {
+        .container{
+           display: grid;
+           grid-template-columns: 0.5fr 1fr;
+           text-align: left;
+           
+        }
+        &__content{
+            width: 90%;
+            font: vars.$body-first;
+        }
+    }
+    .directors {
+        padding: 140px 0 168px;
+        &__row {
+            @include mixins.grid-box(3,39px);
+        }
+    }
+    .clients {
+        padding: 140px 0;
+        &__img{
+            content: url('../../../images/about-img/clients-bg.svg');
+        }
+        &__row {
+            @include mixins.grid-box(5,80px);
+            img{
+                width: 165px;
+                height: 28px;
+            }
+        }
+    }
+}

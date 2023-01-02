@@ -6,3 +6,16 @@
   color: variables.$white;
   font: variables.$body-first;
 }
+
+@mixin flex-box($value) {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $value;
+}
+
+@mixin grid-box($rep,$gap){
+  display: grid;
+  grid-template-columns: repeat($rep,1fr);
+  grid-gap: $gap;
+}

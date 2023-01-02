@@ -2,6 +2,7 @@
 @use "../layout/header";
 @use "../layout/footer";
 @use "../abstract/variables";
+@use "../abstract/mixins";
 
 .home {
   position: relative;
@@ -215,10 +216,14 @@
     color: variables.$s-state-green;
     line-height: 38px;
   }
-  #contact {
+  .contact__btn {
     background-color: transparent;
     border-color: variables.$s-state-green;
     color: variables.$s-state-green;
+  }
+  .contact__btn:hover {
+    background-color:variables.$dark-green;
+    color: variables.$white;
   }
 }
 
@@ -275,20 +280,14 @@
   .home {
     padding-top: 224px;
     .container {
-      text-align: center;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include mixins.flex-box(column);
     }
     .container:last-child {
       justify-content: end;
     }
     &__container {
-      display: flex;
-      flex-direction: row;
+      @include mixins.flex-box(row);
       align-items: end;
-      text-align: center;
-      justify-content: center;
       img {
         position: static;
       }
@@ -368,9 +367,7 @@
     .content {
       text-align: center;
       &__text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include mixins.flex-box(column);
       }
       p {
         width: 74%;
@@ -385,10 +382,8 @@
   .home {
     padding-top: 160px;
     .container {
-      text-align: center;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+     @include mixins.flex-box(column);
+
     }
     &__container {
       padding-bottom: 197px;
@@ -442,9 +437,7 @@
     }
     &__row {
       width: 100%;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
+      @include mixins.flex-box(column);
       margin-bottom: 48px;
       p {
         width: 100%;
@@ -471,9 +464,7 @@
   }
   .start {
     .container {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include mixins.flex-box(column);
     }
     &__title {
       text-align: center;

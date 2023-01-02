@@ -3,7 +3,7 @@
 @use "../components/button";
 @use "../abstract/mixins";
 
-#navbar{
+.navbar{
     position: fixed;
     top:0;
     left:0;
@@ -12,6 +12,7 @@
     z-index: 1000;
     background-color: variables.$midnight-green;
     padding: 73px 0 20px;
+    transition:0.5s;
   .container{
     display: flex;
     align-items: center;
@@ -33,12 +34,25 @@
      .navbar__list .navbar__link{
           @include mixins.nav-link;
       }
+      .navbar__list .navbar__link:hover{
+        color: variables.$light-carol;
+      }
   }
   .toggle-btn{
     display: none;
   }
+  .contact__btn:hover{
+    color: variables.$midnight-green;
+    background-color: variables.$white;
+  }
 }
 
+header {.navbar-shrink{
+  padding: 60px 0 15px;
+  box-shadow: -2px 14px 8px 0px rgba(219, 219, 219, 0.2) ;
+  background-color: variables.$dark-green;
+}
+}
 @media (max-width:590px){
  #navbar {
   .navbar__menus {

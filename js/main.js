@@ -36,8 +36,11 @@ window.addEventListener("scroll", function () {
       document.documentElement.scrollTop > 100
     ) {
       navbar.classList.add("navbar-shrink");
+      // navbar.style.padding = "60px 0 15px";
+
     } else {
       navbar.classList.remove("navbar-shrink");
+      // navbar.style.padding = "73px 0 20px";
     }
   }
   let modeBtn = document.getElementById("dark-light");
@@ -50,3 +53,9 @@ modeBtn.addEventListener("click", function () {
   }
   document.body.classList.toggle("dark");
 });
+
+
+// const link = document.getElementById("link");
+//  function active() {
+//   document.getElementById("about").style.display = "block";
+//  }

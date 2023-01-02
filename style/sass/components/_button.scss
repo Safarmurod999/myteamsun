@@ -1,9 +1,10 @@
 @use "../abstract/variables";
-#contact {
+.contact__btn {
   border: 2px solid variables.$white;
   border-radius: 24px;
   padding: 9px 32px;
   color: variables.$white;
   background-color: transparent;
   font: variables.$body-first;
+  cursor:pointer;
 }
